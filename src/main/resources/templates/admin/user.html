@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Info user page</title>
+</head>
+<body>
+
+<table BORDER="1">
+    <tbody>
+    <tr>
+        <th>USER (ID)</th>
+        <th>NAME</th>
+        <th>LAST NAME</th>
+        <th>CITY</th>
+        <th>PASSWORD</th>
+        <th>ROLE</th>
+    </tr>
+    <tr>
+        <td><a th:text="${user.getId()}">VALUE</a></td>
+        <td><a th:text="${user.getName()}">VALUE</a></td>
+        <td><a th:text="${user.getLastName()}">VALUE</a></td>
+        <td><a th:text="${user.getCity()}">VALUE</a></td>
+        <td><a th:text="${user.getPassword()}">VALUE</a></td>
+        <td><a th:text="${user.getRoles()}">VALUE</a></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<button type="button" onclick="location.href = '/admin/';">Return</button>
+<br>
+<br>
+<form th:method="GET" action="/logout">
+    <input type="submit" value="LOGOUT">
+</form>
+</body>
+</html>
+
+
